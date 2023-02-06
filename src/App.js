@@ -5,7 +5,7 @@ import { Home } from "./components/Home/Home";
 import { Footer } from "./components/Footer/Footer";
 import { ItemDetailContainer } from './components/Menu/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/Menu/ItemListContainer/ItemListContainer';
-import { ItemList } from "./components/Menu/ItemList/ItemList"
+
 
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/menu" element={<ItemListContainer/>}/>
-        <Route path="*" element={<Navigate to ={"/"}/>}/>
-     
-        
+        <Route path="/menu/:categoria" element={<ItemListContainer/>}/>
+        <Route path="/detalle/:itemId" element={<ItemDetailContainer/>}/>
+        <Route path="*" element={<Navigate to= {"/"} /> }/>
       </Routes>
     
     <Footer/>

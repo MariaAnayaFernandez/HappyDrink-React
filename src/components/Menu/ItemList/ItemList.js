@@ -23,7 +23,7 @@ export const ItemList = ({cocteles}) =>{
                       <div className="ordenar">
                         <p className="cantidad">${coctel.precio}.00</p>
                         <button className="btn-ordenar">Ordenar</button> 
-                        <a className="btn-ordenar" href={`/menu/${coctel.id}`}>Ver Detalle</a> 
+                        <a className="btn-ordenar" href={`/detalle/${coctel.id}`}>Ver Detalle</a> 
                       </div>
                     </div>
                   </div>

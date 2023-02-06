@@ -1,0 +1,65 @@
+.detalle{
+    justify-content: center;
+    padding: 35px;
+    margin-top: 80px;
+    background-color:rgb(11, 43, 51) ;
+
+    .detalle-title{
+        text-align: center;
+        font-family: 'Abril Fatface';
+        font-size: 50px;
+        margin-top: 15px;
+        color:white;
+    }
+
+    
+.card-detalle{
+    display: flex;
+    justify-content: center;
+
+
+        img{
+            &:hover{
+                 transform: scale(1.03);
+            }
+        }
+       
+        
+    
+        p{
+            text-align: center;
+            font-family: 'Bitter', serif;
+            font-size: 18px;
+            color:rgb(11, 43, 51);
+        }
+    
+        .ordenar{
+            padding: 5px;
+            color:rgb(11, 43, 51);
+            background-color: white;
+            font-family: 'Bitter', serif;
+            font-size: 15px;
+            text-align: center;
+            
+            .cantidad{
+                color:rgb(11, 43, 51);
+                background-color: white;
+            }
+    
+    
+            .btn-ordenar {
+                padding: 5px;
+                color:rgb(11, 43, 51);
+                background-color: white;
+        
+                &:hover{
+                    transform: scale(1.05);
+               }  
+        
+            }
+    }
+
+    }
+   
+}
+

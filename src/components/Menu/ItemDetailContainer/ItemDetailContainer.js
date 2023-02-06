@@ -1,32 +1,32 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { ItemDetail } from "../ItemDetail/ItemDetail"
-import {doc, getDoc} from "firebase/firestore"
-import {db} from "../../../firebase/config"
+import {ItemDetail} from "../ItemDetail/ItemDetail"
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../../../firebase/config"
 
 
 export const ItemDetailContainer = () => {
 
-    const [item,setItem] = useState(null)
-    const [dataId] = useParams()
+    const [item, setItem] = useState(null)
+    const { itemId } = useParams()
 
-    useEffect (()=>{
-
-        const docRef = doc(db, "cocteles", dataId)
-
+    useEffect(() => {
+   
+        const docRef = doc(db, "cocteles", itemId)
+      
         getDoc(docRef)
-            .then(doc =>{
-                setItem({...doc.data(), id: doc.id})
+            .then(doc => {
+                setItem( {...doc.data(), id: doc.id} )
             })
 
-     
-    }, [dataId])
+    }, [itemId])
 
-    return(
-        <div>
+    return (
+        <div className="detalle">
             {
-               item && <ItemDetail {...item}></ItemDetail>
+                item && <ItemDetail {...item}/>
             }
         </div>
     )
 }
+

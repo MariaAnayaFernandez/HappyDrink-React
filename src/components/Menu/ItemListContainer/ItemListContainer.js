@@ -19,10 +19,8 @@ export const ItemListContainer = () =>{
     const q = categoria
       ? query(coctelesRef, where ("categoria", "==", categoria))
       : coctelesRef
-    
-    
-
-    getDocs(coctelesRef)
+      
+      getDocs(q)
       .then((resp) =>{
         setCocteles(resp.docs.map((doc) => {
           return{
@@ -34,7 +32,7 @@ export const ItemListContainer = () =>{
       .finally(()=>{
         setLoading(false)
       })
-
+  
   }, [categoria])
 
 
