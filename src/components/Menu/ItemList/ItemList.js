@@ -1,3 +1,5 @@
+import { Item } from "../Item/Item"
+
 
 
 export const ItemList = ({cocteles}) =>{
@@ -15,25 +17,8 @@ export const ItemList = ({cocteles}) =>{
 
 
             <section className="menu-cards row row-cols-1 row-cols-md-3 g-4" >
-                {cocteles.map((coctel =>(
-                    <div className="menu-div">
-                    <img  src={require(`../../../imagenes/${coctel.img}`)}  className="card-img-top" alt="Gin Old Fashion"/>
-                    <div className="card-body">
-                      <h5 className="card-title titulo-tarjeta"> {coctel.nombre} </h5>
-                      <div className="ordenar">
-                        <p className="cantidad">${coctel.precio}.00</p>
-                        <button className="btn-ordenar">Ordenar</button> 
-                        <a className="btn-ordenar" href={`/detalle/${coctel.id}`}>Ver Detalle</a> 
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                )))
-                }
+              {cocteles.map((coc) => <Item key={coc.id} {...coc}/>)}
             </section>
-
-
 
         </div>
     )

@@ -1,7 +1,38 @@
 import "./ItemDetail.scss"
 import Card from 'react-bootstrap/Card';
+import {ItemCount} from "../ItemCount/ItemCount"
+import { Link, useNavigate } from "react-router-dom"
+import { useState } from "react"
+import { useCuentaContext } from "../../Context/CuentaContext"
 
-export const ItemDetail = ( {img, nombre, categoria, ingredientes, precio} ) => {
+
+export const ItemDetail = ( {id, img, nombre, categoria, ingredientes, precio, stock} ) => {
+
+    
+    const [cantidad, setCantidad] = useState(1)
+
+    const navigate = useNavigate()  
+    const handleVolver = () =>{
+      navigate(-1)
+    }
+
+    const { agregarCuenta} = useCuentaContext()
+
+   const handleAddItem = () => {
+      const item ={
+          id, 
+          img, 
+          nombre, 
+          categoria, 
+          ingredientes, 
+          precio, 
+          stock,
+          cantidad}   
+
+        agregarCuenta(item)
+  }
+
+  
 
     return (
         <div >
@@ -15,8 +46,21 @@ export const ItemDetail = ( {img, nombre, categoria, ingredientes, precio} ) => 
                       <p>{ingredientes}</p>
                       <div className="ordenar">
                         <p className="cantidad">${precio}.00</p>
-                        <button className="btn-ordenar">Ordenar</button> 
-                        <a className="btn-ordenar" href={`/menu`}>Menú</a> 
+                        <hr></hr>
+                        
+                         
+                          <ItemCount
+                          cantidad={cantidad} 
+                          max={stock}
+                          setCantidad={setCantidad}
+                          handleAddItem={handleAddItem}>
+                          </ItemCount> 
+                          
+
+                        
+
+                        <br></br>
+                        <Link className="btn-ordenar" onClick={handleVolver}>Volver</Link> 
                       </div>
                     </div>
         </Card>

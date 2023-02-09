@@ -91,25 +91,25 @@
             font-size: 15px;
             
             .cantidad{
+                font-size: 20px;
                 color:rgb(11, 43, 51);
                 background-color: white;
             }
-    
-            .inp-ordenar{
-                padding: 5px;
-                color:rgb(11, 43, 51);
-                background-color: white
-            }
+            
+            
             .btn-ordenar {
                 padding: 5px;
                 color:rgb(11, 43, 51);
                 background-color: white;
+                margin: 3px;
         
                 &:hover{
                     transform: scale(1.05);
                }  
         
             }
+
+        
     
         }
     
