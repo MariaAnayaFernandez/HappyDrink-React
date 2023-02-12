@@ -1,3 +1,18 @@
+# Happy Drink
+
+Happy Drink es una aplicación web que está enfocada en una bar. La idea no es vender a domicilio las bebidas, sino más bien automatizar las órdenes en el bar, de tal forma de que los clientes, a través de una tablet en la mesa, puedan pedir sus bebidas sin la necesidad de que un mesero vaya a tomar la orden. 
+
+En el proyecto se utilizaron principalmente las librerías de bootstrap, google-fonts y react-icons, además de las abordadas en la clase, como router-dom, y dom. Consideré esas librerías ya que las considero robustas, actualizadas y que son sencillas de implementar, además claro de que ya las habíamos utilizado en cursos previos.
+
+Las carpetas fueron organizadas por componentes, englobando todos aquellos que pertenecen al menú principal en una sola carpeta, las que están en home en otra por separado, y las de común uso sueltas en la carpeta de componentes. De igual forma, para aquellos documentos que se requirió estilos, dentro de la misma carpeta se encuentra su propio archivo de scss. 
+
+En el caso del cart se utilizó un modal en lugar de una página independiente debido a que considero es más novedoso y la implementación fue relativamente sencilla.
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

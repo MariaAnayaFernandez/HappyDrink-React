@@ -1,4 +1,5 @@
 import './BannerBox.scss'
+
 export const BannerBox = () => {
     return (
         <section className="parallax-bg">
