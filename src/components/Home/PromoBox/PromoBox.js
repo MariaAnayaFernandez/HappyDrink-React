@@ -5,7 +5,7 @@ export const PromoBox = () => {
     return (
         <section className="seccion1">
         <div className="imagen-secc-1">
-          <img src={seccion1}/>
+          <img src={seccion1} alt="margarita especial"/>
         </div> 
         <div className="promocion">
           <div className="texto-secc-1">

@@ -1,18 +1,18 @@
 import {ItemCount} from "../ItemCount/ItemCount"
 import { useState } from "react"
-//import { useCuentaContext } from "../../Context/CuentaContext"
+import { useCuentaContext } from "../../Context/CuentaContext"
 import { Link } from "react-router-dom"
 
 
 
 export const Item = ({id, img, nombre, categoria, ingredientes, precio, stock}) =>{
 
-    //const { agregarCuenta } = useCuentaContext()
+    const {agregarCuenta} = useCuentaContext()
 
     const [cantidad, setCantidad] = useState(1)
 
     const handleAddItem = () => {
-        console.log({
+        const item={
             id, 
             img, 
             nombre, 
@@ -20,9 +20,9 @@ export const Item = ({id, img, nombre, categoria, ingredientes, precio, stock}) 
             ingredientes, 
             precio, 
             stock,
-            cantidad}) 
+            cantidad} 
 
-        //agregarCuenta(item)
+        agregarCuenta(item)
          
     }
 

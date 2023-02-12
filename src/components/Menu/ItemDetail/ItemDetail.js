@@ -6,17 +6,20 @@ import { useState } from "react"
 import { useCuentaContext } from "../../Context/CuentaContext"
 
 
+
 export const ItemDetail = ( {id, img, nombre, categoria, ingredientes, precio, stock} ) => {
 
-    
-    const [cantidad, setCantidad] = useState(1)
+  const {agregarCuenta} = useCuentaContext()
 
+  const [cantidad, setCantidad] = useState(1)
+
+  
     const navigate = useNavigate()  
     const handleVolver = () =>{
       navigate(-1)
     }
 
-    const { agregarCuenta} = useCuentaContext()
+    
 
    const handleAddItem = () => {
       const item ={
@@ -47,18 +50,18 @@ export const ItemDetail = ( {id, img, nombre, categoria, ingredientes, precio, s
                       <div className="ordenar">
                         <p className="cantidad">${precio}.00</p>
                         <hr></hr>
+
                         
-                         
                           <ItemCount
                           cantidad={cantidad} 
                           max={stock}
                           setCantidad={setCantidad}
                           handleAddItem={handleAddItem}>
-                          </ItemCount> 
-                          
+                          </ItemCount>
+                         
 
                         
-
+                           
                         <br></br>
                         <Link className="btn-ordenar" onClick={handleVolver}>Volver</Link> 
                       </div>

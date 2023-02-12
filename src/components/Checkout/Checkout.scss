@@ -1,0 +1,21 @@
+.checkout{
+    padding-top: 80px;
+    margin: 30px;
+    font-family: 'Abril Fatface';
+    color: rgb(11, 43, 51);
+    text-align: center;
+
+    p{
+        text-align: left;
+    }
+
+
+
+        .btn-dark{
+            background-color: rgb(11, 43, 51);
+            &:hover{
+                background-color:rgb(210, 187, 178);
+                color: rgb(11, 43, 51);
+            }
+        }
+}

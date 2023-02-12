@@ -1,4 +1,12 @@
+ .divCuenta{
+    display: flex;
+    justify-content: space-between;
 
+    .btn-trash{
+        justify-content: center;
+
+    }
+ }
     .btn-dark{
         &:hover{
             color:rgb(210, 187, 178);

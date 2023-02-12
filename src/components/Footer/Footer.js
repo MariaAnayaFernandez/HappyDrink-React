@@ -13,8 +13,8 @@ export const Footer = () => {
                 <div className="box_footer footer-redes">
                     <h2><a className="menu-footer" href="/menu">Menú</a></h2>
                     <div className="redes">
-                      <a href="https://es-la.facebook.com/" target="_blank"><i className="bi bi-facebook"></i></a>
-                      <a href="https://www.instagram.com/" target="_blank"><i className="bi bi-instagram"></i></a>
+                      <a href="https://es-la.facebook.com/" target="_blank" rel="noreferrer"><i className="bi bi-facebook"></i></a>
+                      <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><i className="bi bi-instagram"></i></a>
                     </div>
                 </div>
   
